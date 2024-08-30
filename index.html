@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-toggle">
+            <button id="login-toggle" onclick="showLogin()">Login</button>
+            <button id="register-toggle" onclick="showRegister()">SignUp</button>
+        </div>
+        <div id="login-form" class="form">
+            <h2>Login</h2>
+            <form onsubmit="return validateLogin()">
+                <div class="form-group">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" required>
+                    <span id="login-usernameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                    <span id="login-passwordError" class="error"></span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="register-form" class="form hidden">
+            <h2>Register</h2>
+            <form onsubmit="return validateRegistration()">
+                <div class="form-group">
+                    <label for="register-username">Username:</label>
+                    <input type="text" id="register-username" required>
+                    <span id="register-usernameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" required>
+                    <span id="register-emailError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" required>
+                    <span id="register-passwordError" class="error"></span>
+                </div>
+                <button type="submit">SignUp</button>
+    
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
